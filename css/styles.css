@@ -131,6 +131,9 @@ img{
 .button:focus{
    color: var(--white-color);
    background-color: var(--accent-color);
+   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+   0px 1px 2px rgba(0, 0, 0, 0.08), 
+   0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .button.active {
@@ -201,40 +204,31 @@ color: var(--accent-color);
 
    color:var(--primary-text-color);
 }
+
 .auth-nav .link:hover,
 .auth-nav .link:focus{
    color: var(--accent-color);
 }
 
-/* Icon sprite */
 .icon{
    margin-right: 10px;
-   fill: var(--primary-text-color);
-}
-.icon:hover{
-   fill: var(--accent-color);
+   fill: currentColor;
 }
 
 /* Hero */
 .hero{
-   text-align: center;
-}
-
-.overlay{
    height: 600px;
    max-width: 1600px;
    margin-left: auto;
    margin-right: auto;
+   text-align: center;
 
-   background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-      ), url("../images/index/hero/hero.jpg");
-
+   background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)), url("../images/index/hero/hero.jpg");
+   
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
-
    background-color: var(--bcg-color);
 }
 
@@ -347,11 +341,9 @@ color: var(--accent-color);
    line-height: 1.19;
 }
 .box{
-   max-width: 206px;
-   padding-top: 30px;
-   padding-bottom: 30px;
-   margin: 0 auto;
+   padding: 30px 32px;
 }
+
 .team-list{
    display: flex;
 }
@@ -378,57 +370,77 @@ color: var(--accent-color);
 
 .actions{
    display: flex;
-   justify-content: space-between;
-   width: 206px; 
+   align-items: center;
 }
 
 .actions li{
    display: flex;
-   height: 44px;
-   width: 44px;
-   border-radius: 22px;
+   align-items: center;
+}
+
+.actions li:not(:last-child){
+   margin-right: 10px;
+}
+
+.actions-link{
+   display: flex;
    align-items: center;
    justify-content: center;
+
+   height: 44px;
+   width: 44px;
+   border-radius: 50%;
+
+   color: var(--icon-colors);
+}
+
+.actions-link:hover,
+.actions-link:focus{
+background-color: var(--accent-color);
+color: var(--white-color);
 }
 
 .actions-icon{
    height: 22px;
    width: 22px;
-   fill: var(--icon-colors);
-}
-.actions-icon:hover{
-   fill: var(--white-color);
+   fill: currentColor;
 }
 
-.actions li:hover{
-   background-color: var(--accent-color);
-}
 /* clients */
 
 .partners{
    display: flex;
-   justify-content: space-between;
-   margin: 0 auto;
+   align-items: center;
 }
 
 .partners li{
    display: flex;
-   justify-content: center;
    align-items: center;
-   width: 170px;
-   height: 92px;
+}
+
+.partners li:not(:last-child) {
+   margin-right: 30px;
+}
+.partner-link{
+   color: var(--icon-colors);
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
    border: 1px solid var(--icon-colors);
    border-radius: 4px;
-}
-.partners li:hover{
-   border: solid var(--accent-color);
+   height: 92px;
+   width: 170px;
 }
 
 .partner-icon{
-   fill: var(--icon-colors);
+   fill: currentColor;
 }
-.partner-icon:hover{
-   fill: var(--accent-color);
+
+.partner-link:hover,
+.partner-link:focus{
+   color: var(--accent-color);
+   border: solid var(--accent-color);
 }
 
 /* Футер */
@@ -477,13 +489,6 @@ color: var(--accent-color);
 .block{
    display: inline-block;
    margin-left: 70px;
-   margin-top: 72px;
-   margin-bottom: 100px;
-}
-
-.box-footer{
-   margin-top: 60px;
-   margin-bottom: 60px;
 }
 
 .join{
@@ -495,18 +500,14 @@ color: var(--accent-color);
 
    color: var(--white-color);
 }
-.actions-icon.holder {
-   fill: var(--white-color);
-}
 
 .actions.holder li{
    background-color: rgb(255, 255, 255, 0.1);
-}
-.actions.holder li:hover {
-   background-color: var(--accent-color);
+   border-radius: 50%;
 }
 
 /* Портфолио */
+
 .list.page{
    display: flex;
    flex-wrap: wrap;
@@ -517,6 +518,13 @@ color: var(--accent-color);
    margin-right: 30px;
    border: 1px solid #EEEEEE;
    margin-bottom: 30px;
+}
+
+
+.item .link:focus{
+   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+   0px 4px 4px rgba(0, 0, 0, 0.06), 
+   1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .page .item:nth-child(3n){
